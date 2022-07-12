@@ -31,12 +31,12 @@ target_compile_definitions(imgui
 )
 
 target_include_directories(imgui
-    PRIVATE
+    PUBLIC
         ${PROJECT_SOURCE_DIR}
 )
 
 target_link_libraries(imgui
-    PRIVATE
+    INTERFACE
         Vulkan::Vulkan
 )
 
