@@ -32,7 +32,9 @@ target_compile_definitions(imgui
 
 target_include_directories(imgui
     PUBLIC
-        ${PROJECT_SOURCE_DIR}
+        $<INSTALL_INTERFACE:include/>
+    PRIVATE
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>
 )
 
 target_link_libraries(imgui
