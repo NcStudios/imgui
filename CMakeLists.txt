@@ -38,7 +38,7 @@ target_include_directories(imgui
 )
 
 target_link_libraries(imgui
-    INTERFACE
+    PUBLIC
         Vulkan::Vulkan
 )
 
