@@ -1552,7 +1552,7 @@ enum ImGuiKey : int
 #ifndef IMGUI_DISABLE_OBSOLETE_FUNCTIONS
     ImGuiMod_Shortcut               = ImGuiMod_Ctrl,            // Removed in 1.90.7, you can now simply use ImGuiMod_Ctrl
     ImGuiKey_ModCtrl = ImGuiMod_Ctrl, ImGuiKey_ModShift = ImGuiMod_Shift, ImGuiKey_ModAlt = ImGuiMod_Alt, ImGuiKey_ModSuper = ImGuiMod_Super, // Renamed in 1.89
-    //ImGuiKey_KeyPadEnter = ImGuiKey_KeypadEnter,              // Renamed in 1.87
+    ImGuiKey_KeyPadEnter = ImGuiKey_KeypadEnter,                // Renamed in 1.87
 #endif
 };
 
