@@ -252,7 +252,7 @@ typedef int ImGuiWindowFlags;       // -> enum ImGuiWindowFlags_     // Flags: f
 // - You can make this a structure with various constructors if you need. You will have to implement ==/!= operators.
 // - (note: before v1.91.4 (2024/10/08) the default type for ImTextureID was void*. Use intermediary intptr_t cast and read FAQ if you have casting warnings)
 #ifndef ImTextureID
-typedef ImU64 ImTextureID;          // Default: store a pointer or an integer fitting in a pointer (most renderer backends are ok with that)
+typedef void* ImTextureID;          // Default: store a pointer or an integer fitting in a pointer (most renderer backends are ok with that)
 #endif
 
 // ImDrawIdx: vertex index. [Compile-time configurable type]
@@ -1552,7 +1552,7 @@ enum ImGuiKey : int
 #ifndef IMGUI_DISABLE_OBSOLETE_FUNCTIONS
     ImGuiMod_Shortcut               = ImGuiMod_Ctrl,            // Removed in 1.90.7, you can now simply use ImGuiMod_Ctrl
     ImGuiKey_ModCtrl = ImGuiMod_Ctrl, ImGuiKey_ModShift = ImGuiMod_Shift, ImGuiKey_ModAlt = ImGuiMod_Alt, ImGuiKey_ModSuper = ImGuiMod_Super, // Renamed in 1.89
-    //ImGuiKey_KeyPadEnter = ImGuiKey_KeypadEnter,              // Renamed in 1.87
+    ImGuiKey_KeyPadEnter = ImGuiKey_KeypadEnter,                // Renamed in 1.87
 #endif
 };
 
